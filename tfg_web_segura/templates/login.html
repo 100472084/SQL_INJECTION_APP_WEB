@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="../static/login.css">
+
+<form method="post">
+    <label>Usuario:</label>
+    <input type="text" name="username" width="100px"><br>
+    <label>Contraseña:</label>
+    <input type="password" name="password" width="100px"><br>
+    {% if error %}
+        <p class="mesg-error">{{ error }}</p>
+    {% endif %}
+    <input type="submit" value="Iniciar sesión">
+</form>
+
+<a href="{{ url_for('inicio') }}">← Volver al inicio</a>

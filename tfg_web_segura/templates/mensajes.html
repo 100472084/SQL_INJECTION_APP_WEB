@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="../static/mensajes.css">
+
+<h2>📨 Mensajes recibidos</h2>
+
+{% if mensaje %}
+  <p style="color: red;">{{ mensaje }}</p>
+{% endif %}
+
+{% for mensaje, fecha, remitente in mensajes %}
+  <div style="border:1px solid #ccc; margin-bottom:10px; padding:10px;">
+    <p><strong>De:</strong> {{ remitente }}</p>
+    <p>{{ mensaje }}</p>
+    <p style="font-size:small; color:gray;">{{ fecha }}</p>
+  </div>
+{% endfor %}
+
+<a href="{{ url_for('enviar_mensaje') }}">✉️ Enviar nuevo mensaje</a>
+<br><br>
+<a href="{{ url_for('feed') }}">← Volver al feed</a>
