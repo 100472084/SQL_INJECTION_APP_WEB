@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="../static/registro.css">
+
+<h2>Formulario de Registro</h2>
+
+<form method="post">
+  Usuario: <input type="text" name="username" required><br><br>
+  Contraseña: <input type="text" name="password" required><br><br>
+  Email: <input type="email" name="email" required><br><br>
+  DNI: <input type="text" name="dni"><br><br>
+  Teléfono: <input type="text" name="telefono"><br><br>
+  Nombre completo: <input type="text" name="nombre"><br><br>
+  Fecha de nacimiento: <input type="date" name="nacimiento"><br><br>
+  Dirección: <input type="text" name="direccion"><br><br>
+
+  <input type="submit" value="Crear cuenta">
+</form>
+
+<a href="{{ url_for('inicio') }}">← Volver al inicio</a>

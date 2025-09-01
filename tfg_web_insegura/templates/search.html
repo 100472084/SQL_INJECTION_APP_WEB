@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="../static/search.css">
+
+<h2>🔍 Buscar usuario</h2>
+
+<form method="post">
+  <input type="text" name="termino" placeholder="Introduce el nombre de usuario">
+  <input type="submit" value="Buscar">
+</form>
+
+{% if resultados %}
+  <table>
+    <thead>
+      <tr>
+        <th>👤 Nombre de Usuario</th>
+        <th>🪪 Nombre Completo</th>
+        <th>📅 Fecha de Nacimiento</th>
+        <th>📞 Teléfono</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for fila in resultados %}
+        <tr>
+          {% for valor in fila %}
+            <td>{{ valor }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+
+<a href="{{ url_for('feed') }}">← Volver al feed</a>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comentar publicación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='comentario.css') }}">
+</head>
+<body>
+    <div class="comentario-container">
+        <h2>📝 Comentar publicación</h2>
+
+        <form method="post">
+            <label for="comentario">Tu comentario:</label><br>
+            <textarea name="comentario" id="comentario" rows="5" cols="40" required></textarea><br><br>
+
+            <input type="submit" value="Publicar comentario">
+        </form>
+
+        <br>
+        <a href="{{ url_for('feed') }}">← Volver al feed</a>
+    </div>
+</body>
+</html>

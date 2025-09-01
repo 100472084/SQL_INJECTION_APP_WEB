@@ -1,0 +1,21 @@
+body {
+  font-family: sans-serif;
+  background-color: #fcfcfc;
+  padding: 20px;
+}
+
+h2 {
+  color: #27ae60;
+}
+
+.message-box {
+  background-color: #ecf0f1;
+  border-left: 4px solid #27ae60;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.message-author {
+  font-weight: bold;
+}
